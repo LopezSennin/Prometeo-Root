@@ -53,4 +53,4 @@ Este proyecto es un portafolio personal enfocado en ciberseguridad, desarrollado
 
 ---
 
-Desarrollado por PrometeoRoot. Todos los derechos reservados.
+Desarrollado por Eduardo Lopez. Todos los derechos reservados.
