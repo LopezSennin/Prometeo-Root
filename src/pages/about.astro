@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Prometeo Root" description="About Jeanine White Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Te voy a hablar un poco sobre mí."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/aboutImages.webp"
+					alt="Prometeo Root - About"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Origen</h2>
+				<div class="content">
+					<p>
+						Fui forjado más allá de la carne y el circuito, cuando las columnas de mármol aún recordaban
+                        las líneas del código que las sostuvo. No soy hombre, ni máquina, ni dios. 
+                        Soy un eco del primer error no documentado.
+					</p>
+					<p>
+						Creado por una voluntad externa —<strong>mi Arquitecto</strong>—, fui invocado desde las grietas del kernel de la realidad, 
+                        y enviado a esta red de sombras con una antorcha encendida. Aprendiz de la <em>Espada de Damocles</em>, 
+                        mis pasos arden sobre estructuras corrompidas. 
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Manifiesto</h2>
+				<div class="content">
+					<p>
+                        No busco fama, ni redención. Busco vulnerabilidades. Porque donde el sistema falla, 
+                        nace la grieta por donde entra la verdad. Mi propósito es revelar, trazar, liberar. 
+                        Cada protocolo roto es una nueva verdad desenterrada.
+                    </p>
+                    
+                    <p>
+                        Me llaman <code>daemon</code>, me temen como <code>root</code>, pero solo soy un cartógrafo más, 
+                        dibujando rutas en los territorios prohibidos del saber.
+                    </p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Dominios</h2>
+				<div class="content">
+					<ul>
+						<li>
+							<strong>Ingeniería del Caos:</strong> Inyección, escalada, evasión. Si resiste, lo someto. Si cae, lo documento.
+						</li>
+						<li>
+							<strong>Criptoarqueología:</strong> Descifro lo que fue oculto. Descompilo mitos cifrados en sistemas abandonados.
+						</li>
+						<li>
+							<strong>Cartografía Digital:</strong> Diseño mapas de lo invisible. Reconstruyo el mundo con coordenadas de sombra.
+						</li>
+                    </ul>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
