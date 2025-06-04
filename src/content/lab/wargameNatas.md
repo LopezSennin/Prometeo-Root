@@ -1,7 +1,7 @@
 ---
 title: Prometeo Root – Wargame Natas
 publishDate: 2025-05-19 00:00:00
-img: /assets/labs/natas.webp
+img: /Prometeo-Root/assets/labs/natas.webp
 img_alt: Ancient screen flickers inside a forgotten terminal temple
 description: |
   Un acceso simple. Una página común. ¿Pero lo es? Aprende a mirar más allá de lo visible.  
