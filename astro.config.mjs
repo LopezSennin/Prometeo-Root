@@ -4,6 +4,6 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://LopezSennin.github.io',
-    base: '/Prometeo-Root/'
+    base: '/Prometeo-Root'
 });
     
