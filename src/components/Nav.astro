@@ -19,10 +19,15 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 /** Test if a link is pointing to the current page. */
 const isCurrentPage = (href: string) => {
-	let pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
-	if (pathname.at(0) !== '/') pathname = '/' + pathname;
-	if (pathname.at(-1) !== '/') pathname += '/';
-	return pathname === href || (href !== '/' && pathname.startsWith(href));
+    // Obtenemos la ruta actual directamente
+    let pathname = Astro.url.pathname;
+    
+    // Normalizamos agregando barras al inicio y final si faltan
+    if (pathname.at(0) !== '/') pathname = '/' + pathname;
+    if (pathname.at(-1) !== '/') pathname += '/';
+    
+    // Comparamos directamente con el href que ya tiene el prefijo /Prometeo-Root/
+    return pathname === href || (href !== '/Prometeo-Root/' && pathname.startsWith(href));
 };
 ---
 
